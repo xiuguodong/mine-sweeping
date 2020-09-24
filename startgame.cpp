@@ -10,7 +10,7 @@ StartGame::StartGame(QWidget *parent)
     , ui(new Ui::StartGame)
 {
     ui->setupUi(this);
-    setWindowFlags(windowFlags()&~Qt::WindowMaximizeButtonHint);
+    setWindowFlags(windowFlags()&~Qt::WindowMaximizeButtonHint);//去掉最大化按钮
     this->setFixedSize(this->size().width(),this->size().height());
 }
 

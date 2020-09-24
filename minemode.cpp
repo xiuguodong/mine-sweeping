@@ -112,6 +112,10 @@ b: int x1,y1;
                     }
                     else
                     {
+                        QTime time;
+                        time.start();
+                        while(time.elapsed() < 1000)
+                            QCoreApplication::processEvents();
                         loseCG *a = new loseCG(this);
                         a->show();
                         this->hide();
@@ -426,6 +430,10 @@ b: int x1,y1;
                         }
                         else
                         {
+                            QTime time;
+                            time.start();
+                            while(time.elapsed() < 1000)
+                                QCoreApplication::processEvents();
                             loseCG *a = new loseCG(this);
                             a->show();
                             this->hide();
@@ -637,7 +645,7 @@ b2:  int x1,y1;
         QTime time;
         time= QTime::currentTime();
         qsrand(time.msec()+time.second()*1000+i*10000);
-       x1= qrand() % 15;    //产生25以内的随机数
+       x1= qrand() % 15;    //产生15以内的随机数
         }
         else if(y.size() <= 20)
         {
@@ -681,6 +689,10 @@ b2:  int x1,y1;
                    }
                    else
                    {
+                       QTime time;
+                       time.start();
+                       while(time.elapsed() < 1000)
+                           QCoreApplication::processEvents();
                        loseCG *a = new loseCG(this);
                        a->show();
                        this->hide();
